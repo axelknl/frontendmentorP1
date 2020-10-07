@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="mobilelogo">
+                <img src="assets/logo.svg">
+            </div>
+            <header>
+                <div class="left text">
+                    <div class="logo">
+                        <img src="assets/logo.svg">
+                    </div>
+                    <div class="content">
+                        <h1 class="title">WE'RE <strong>COMING SOON</strong></h1>
+                        <p>Hello fellow shopper! We're currently building our new fashion store. Add your email below to stay up-to-date 
+                            with announcements and our launch deals.
+                        </p>
+                        <div class="searchbar" id="search">
+                            <input id="email" placeholder="Email Adress">
+                            <img class="error" id="error" src="assets/icon-error.svg">
+                            <button id="button" onclick="compar();">
+                                <img src="assets/icon-arrow.svg">
+                            </button>
+                        </div>
+                        <p class="errormessage" id="errormessage">Please provide a valid email</p>
+                    </div>
+                </div>
+                <div class="right bg">
+                    <img src="assets/hero-desktop.jpg">
+                </div>
+            </header>
+
+            <script type="text/javascript">
+            
+            function compar() {
+                var email = document.getElementById("email").value.indexOf("@");
+
+                if (email == -1) {
+                    document.getElementById("search").style.border = "2px solid hsl(0, 93%, 68%)";
+                    document.getElementById("error").style.visibility = "visible";
+                    document.getElementById("errormessage").style.visibility = "visible";
+                }
+                else {
+                    document.getElementById("search").style.border = "1px solid hsl(0, 80%, 86%)";
+                    document.getElementById("error").style.visibility = "hidden";
+                    document.getElementById("errormessage").style.visibility = "hidden";
+                }
+            }
+            
+            </script>
+
+
+        </div>
+    </body>
+</html>
